@@ -5,7 +5,7 @@ Just a troll project for calculating a shadow for a plate. Complementary to Nick
 > this is a test/troll library. Do not use this is production ( unless you're crazy )
 
 #PREVIEW:
-https://htmlpreview.github.io/?https://github.com/artweb11/shadownick
+https://htmlpreview.github.io/?https://github.com/artweb11/shadownick/blob/master/index.html
 
 # LICENSE
 
