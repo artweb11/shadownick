@@ -23,17 +23,35 @@
 	}
 
 	function mdown( e ){
+		dragobj = $('plate');
+		var pos = dragobj.getClientRects()[0];
 		startx = e.offsetX;
 		starty = e.offsetY;
 
-		dragobj = $('plate');
-		dragobj.parentNode.removeChild( dragobj );
+		window.requestAnimationFrame( function(){
+			dragobj.parentNode.removeChild( dragobj );
+			document.body.appendChild( dragobj );
+		});
 		dragobj.style.position = 'absolute';
-		document.body.appendChild( dragobj );
+		if( dragobj.parentNode != document.body ){
+			dragobj.style.left = parseInt(pos.left)+'px';
+			dragobj.style.top = parseInt(pos.top )+'px';
+		}
+
 		window.addEventListener('mousemove', mmove, false );
 	}
 
 	function mup( e ){
+		var vx = e.clientX-startx;
+		var vy = e.clientY-starty;
+
+		if( is_inside( vx+100, vy+100, rect ) ){
+			dragobj.parentNode.removeChild( dragobj );
+
+			$('stage').appendChild( dragobj );
+			dragobj.style.left = vx - rect.left+'px';
+			dragobj.style.top = vy - rect.top+'px';
+		}
 		dragobj = null;
 		startx = 0;
 		starty = 0;
@@ -41,7 +59,7 @@
 		window.removeEventListener('mousemove', mmove, false );	
 	}
 	function mmove( e ){
-		console.log( startx, starty );
+		//console.log( startx, starty );
 		var vx = e.clientX-startx;
 		var vy = e.clientY-starty;
 
