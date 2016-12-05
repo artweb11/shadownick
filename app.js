@@ -54,11 +54,13 @@
 			var posy = ( Math.cos( ang ) * amt );
 			console.log( posx );
 			shad.style.webkitTransform = 'translate('+posx+'px,'+posy+'px)';
-			if( dist < 100 ){
+			if( dist < 130 ){
 				shad.style.webkitFilter = 'blur(5px) hue-rotate(300deg)';
 			} else {
 				shad.style.webkitFilter = 'blur('+bamt+'px) brightness(0.2)';
 			}
+		} else {
+			shad.style.webkitFilter = '';
 		}
 
 
