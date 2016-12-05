@@ -1,0 +1,59 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.object {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+}
+.object .graph {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	z-index: 2;
+	background: url(plate.png) left top no-repeat;
+	background-size: 100% auto;
+}
+.shadow {
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	width: 200px;
+	height: 200px;
+	background: url(candle.png) left top no-repeat;
+	background-size: 100% auto;	
+	/*filter: blur(10px) brightness(0.2);*/
+}
+.candle {
+	position: absolute;
+	left: 150px;
+	top: 70px;
+	width: 130px;
+	height: 130px;
+	background: url(candle.png) left top no-repeat;
+	background-size: 100% auto;
+}
+
+
+#stage {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	
+	left: 400px;
+	top: 200px;
+	background: #ececec;
+	border: solid 1px #a0a0a0;
+}
