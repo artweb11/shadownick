@@ -4,6 +4,7 @@
 	var starty = 0;
 	var rect = $('stage').getClientRects()[0];
 	var candle = $('candle');
+	var graph = $('graph');
 	var candlepos = candle.getClientRects()[0];
 	candlepos = {x: candlepos.left, y: candlepos.top };
 	var shad = $('shad');
@@ -54,13 +55,17 @@
 			var posy = ( Math.cos( ang ) * amt );
 			console.log( posx );
 			shad.style.webkitTransform = 'translate('+posx+'px,'+posy+'px)';
-			if( dist < 130 ){
+			if( dist < 90 ){
 				shad.style.webkitFilter = 'blur(5px) hue-rotate(300deg)';
+				graph.style.webkitFilter = 'blur(1px) hue-rotate(330deg) contrast(2.3)';
 			} else {
 				shad.style.webkitFilter = 'blur('+bamt+'px) brightness(0.2)';
+				graph.style.webkitFilter = '';
 			}
 		} else {
+			shad.style.webkitTransform = '';
 			shad.style.webkitFilter = '';
+			graph.style.webkitFilter = '';
 		}
 
 
