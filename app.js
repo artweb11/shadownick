@@ -46,13 +46,14 @@
 		if( is_inside( vx+100, vy+100, rect ) ){
 			var dist = distance( {x: vx, y: vy}, candlepos );
 			var amt = Math.round( Math.min( 1, dist / 400 ) * 20 );
+			var bamt = Math.round( Math.min( 1, dist / 400 ) * 10 );
 			var ang = Math.atan2( vx-candlepos.x, vy-candlepos.y );
 
 			var posx = ( Math.sin( ang ) * amt );
 			var posy = ( Math.cos( ang ) * amt );
 			console.log( posx );
 			shad.style.webkitTransform = 'translate('+posx+'px,'+posy+'px)';
-			shad.style.webkitFilter = 'blur('+amt+'px) brightness(0.2)';
+			shad.style.webkitFilter = 'blur('+bamt+'px) brightness(0.2)';
 		}
 
 		if( dragobj ){
