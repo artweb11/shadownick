@@ -1,5 +1,7 @@
 # shadownick
-Just a troll project for calculating a shadow for a plate. Complementary to Nickable
+Just a troll project for calculating a shadow for a plate. Complementary to Nickable.
+
+Desktop / Chrome only.
 
 
 > this is a test/troll library. Do not use this is production ( unless you're crazy )
