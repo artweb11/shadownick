@@ -22,8 +22,9 @@
 	}
 
 	function mdown( e ){
-		startx = e.clientX;
-		starty = e.clientY;
+		startx = e.offsetX;
+		starty = e.offsetY;
+
 		dragobj = $('plate');
 		dragobj.parentNode.removeChild( dragobj );
 		dragobj.style.position = 'absolute';
@@ -39,7 +40,7 @@
 		window.removeEventListener('mousemove', mmove, false );	
 	}
 	function mmove( e ){
-		//console.log( e.clientX );
+		console.log( startx, starty );
 		var vx = e.clientX-startx;
 		var vy = e.clientY-starty;
 
