@@ -55,6 +55,9 @@ html,body {
 	
 	left: 400px;
 	top: 200px;
-	background: #ececec;
+	/*background: #ececec;*/
+	background: url(wood-010.jpg) center center no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
 	border: solid 1px #a0a0a0;
 }

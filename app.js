@@ -116,7 +116,7 @@
 				shad.style.webkitFilter = 'blur(5px) hue-rotate(300deg)';
 				graph.style.webkitFilter = 'blur(1px) hue-rotate(330deg) contrast(2.3)';
 			} else {
-				shad.style.webkitFilter = 'blur('+bamt+'px) brightness(0.2)';
+				shad.style.webkitFilter = 'blur('+bamt+'px) brightness(0)';
 				graph.style.webkitFilter = '';
 			}
 		} else {
@@ -157,7 +157,7 @@
 				var posx = ( Math.sin( ang ) * a );
 				var posy = ( Math.cos( ang ) * a );
 				shad.style.webkitTransform = 'translate('+posx+'px,'+posy+'px)';
-				shad.style.webkitFilter = 'blur('+(bamt-(plussing*0.5) )+'px) brightness(0.2)';
+				shad.style.webkitFilter = 'blur('+(bamt-(plussing*0.5) )+'px) brightness(0)';
 			});
 		}
 		
