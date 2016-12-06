@@ -7,7 +7,7 @@ Desktop / Chrome only.
 > this is a test/troll library. Do not use this is production ( unless you're crazy )
 
 #PREVIEW:
-https://htmlpreview.github.io/?https://github.com/artweb11/shadownick/blob/master/index.html
+https://htmlpreview.github.io/?https://github.com/artweb11/shadownick/blob/experimental/index.html
 
 # LICENSE
 
